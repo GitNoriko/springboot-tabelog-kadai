@@ -24,7 +24,8 @@ import com.stripe.model.Subscription;
 public class MembershipController {
 	@Value("${stripe.premium-plan-id}")
 	private String premiumPlanId;
-	
+
+	@Autowired
 	private final UserRepository userRepository;
 	private final UserService userService;
 	private final StripeService stripeService;
